@@ -24,7 +24,7 @@ class App extends StatelessWidget {
           body: BlocConsumer<AppBlocBloc, AppState>(
             listener: (context, state) {},
             builder: (context, state) {
-              return TextController(
+              return TextChangeController(
                 text: state.text,
               );
             },

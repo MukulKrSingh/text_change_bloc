@@ -4,21 +4,17 @@ import 'package:text_change/text.dart';
 
 import 'bloc/app_bloc_bloc.dart';
 
-class TextController extends StatefulWidget {
+class TextChangeController extends StatelessWidget {
   final String text;
-  const TextController({Key? key, required this.text}) : super(key: key);
 
-  @override
-  State<TextController> createState() => _TextControllerState();
-}
+  const TextChangeController({Key? key, required this.text}) : super(key: key);
 
-class _TextControllerState extends State<TextController> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         TextChange(
-          text: widget.text,
+          text: text,
         ),
         ElevatedButton(
           onPressed: () =>
