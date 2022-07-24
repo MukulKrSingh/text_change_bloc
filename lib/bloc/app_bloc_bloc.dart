@@ -27,13 +27,7 @@ class AppBlocBloc extends Bloc<AppBlocEvent, AppState> {
         );
       } on Exception catch (e) {
         // ignore: avoid_print
-        print(e.toString());
-        emit(
-          AppState(
-            index: 0,
-            text: textList[0],
-          ),
-        );
+        print(e);
       }
     });
   }
